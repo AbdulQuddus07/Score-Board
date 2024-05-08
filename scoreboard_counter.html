@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scoreboard_counter.html</title>
+    <link rel="stylesheet" href="scoreboard_counter.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="overlay">
+        <div class="title">My Counter Application</div>
+        <div class="col" oninput="displaytime()">
+          <div><input id="minute"  type="number" min="0" max="60" value="00"/>
+            <input id="second"  type="number" min="0" max="60" value="00"/>
+            <br><br><label class="label">Type Number in Seconds</label></div>
+        </div>
+        <div id="display">00:00</div>
+        <div class="btn">
+            <button class="startbtn" id="startbtn" onclick="startbtn()">Start</button>
+            <button class="pausebtn" id="pausebtn" onclick="pausebtn()">Pause</button>
+            <button class="resetbtn" id="resetbtn" onclick="resetbtn()">Reset</button>
+          </div>
+          <div class="scoreborad">
+            <div>
+              <h2>First Team</h2>
+              <p id="teamAScore">0</p>
+              <button onclick="incrementScore('teamA')">+</button>
+            </div>
+            <div>
+              <h2>Second Team</h2>
+              <p id="teamBScore">0</p>
+              <button onclick="incrementScore('teamB')">+</button>
+            </div>
+          </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
